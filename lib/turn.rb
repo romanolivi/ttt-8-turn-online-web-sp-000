@@ -8,13 +8,10 @@ def display_board(board)
 end
 
 def turn(board)
-  until valid_move? == true
+  while !valid_move?
   puts "Please enter 1-9:"
   input = gets.strip()
   index = input_to_index(input)
-    if valid_move? == true
-      break
-    end
   move(board, index)
   display_board(board)
 end 
